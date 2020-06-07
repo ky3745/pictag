@@ -1,0 +1,37 @@
+@import "reset";
+@import "modules/posts";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "modules/user";
+@import "modules/post";
+@import "modules/new-post";
+@import "modules/comments";
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Oleo Script', cursive;
+}
+
+p, li, a, i, h2, h3, h5, .new_post, .field-label {
+  color: $decorationColor;
+  font-family: 'Baloo Thambi 2', 'Kosugi Maru', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.pagination {
+  font-size: 25px;
+  text-align: center;
+  .page.current {
+    color: rgb(184, 56, 56);
+  }
+}
