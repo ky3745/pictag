@@ -1,0 +1,98 @@
+.post {
+  padding: 10px 0;
+  border: 2px solid $decorationColor;
+  border-radius: 10px ;
+  background-color: $side-barColor;
+  margin-bottom: 50px;
+  .upper-info {
+    position: relative;
+    padding: 0 10px;
+    height: 30px;
+    &__talker {
+      position: absolute;
+      font-size: 25px;
+      bottom: 0px;
+    }
+    &__date {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      padding-right: 5px;;
+    }
+    &__date1 {
+      position: absolute;
+      right: 50px;
+      bottom: 0px;
+    }
+    &__delete {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      font-size: 20px;
+      padding-right: 15px;
+      i {
+        color: rgb(182, 0, 0);
+      }
+    }
+  }
+  .middle-content {
+    img {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+    }
+    &__lower {
+      display: flex;
+      position: relative;
+      margin-bottom: 5px;
+      .text {
+        padding: 0 10px 25px;
+        white-space: pre-wrap;
+      }
+      .icon-box {
+        position: absolute;
+        height: 30px;
+        right: 0px;
+        font-size: 20px;
+        display: flex;
+        &__comment {
+          display: flex;
+        }
+        &__heart {
+          display: flex;
+          .unlike i {
+            color: rgb(255, 146, 146);
+          }
+        }
+        i {
+          line-height: 30px;
+          padding-right: 3px;
+        }
+        p {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+  .lower-tag {
+    ul {
+      flex-wrap: wrap;
+    }
+    .tag-list {
+      display: flex;
+      padding: 0 10px;
+      .tag {
+        height: 30px;
+        line-height: 30px;
+        background-color: $headerColor;
+        border: 1px solid $headerColor;
+        border-radius: 3px;
+        margin: 0 6px 10px;
+        &__name {
+          padding: 0 10px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+@import "config/variable";
+
+.wrapper {
+  height: 100vh;
+  background-color: $mainColor;
+}
+
+.header-fixed {
+  width: 100vw;
+  height: $headerHeight;
+  background-color: $headerColor;
+  .header-bk {
+    padding: 15px;
+    height: calc(#{$headerHeight} - 30px);
+    .header {
+      font-size: calc(#{$headerHeight} / 2);
+      text-align: center;
+      height: 100%;
+      width: 300px;
+      margin: auto;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+  width: 100vw;
+  font-family: 'Baloo Thambi 2', 'Kosugi Maru', sans-serif;
+  .side-bar {
+    width: $side-barWidth;
+    background-color: $side-barColor;
+    .user-name {
+      height: 100px;
+      padding: 0 20px;
+      line-height: 100px;
+      font-size: 30px;
+      background-color: rgb(184, 56, 56);
+    }
+    li {
+      height: 70px;
+      line-height: 70px;
+      padding-left: 50px;
+      font-size: 20px;
+      border-bottom: 1px solid;
+    }
+  }
+
+  .main {
+    width: calc(100vw - #{$side-barWidth});
+    &__header {
+      height: 50px;
+      display: flex;
+      text-align: center;
+      font-size: 20px;
+      line-height: 50px;
+      background-color: rgb(209, 142, 142);
+      &__item {
+        width: 50%;
+      }
+      &__item.active {
+        background-color: $mainColor;
+      }
+      &__item:not(.active) {
+        cursor: pointer;
+      }
+    }
+    &__header1 {
+      height: 80px;
+      text-align: center;
+      font-size: 35px;
+      color: $decorationColor;
+      line-height: 80px;
+      background-color: $side-barColor;
+    }
+    .list {
+      overflow: scroll;
+      height: calc(100vh - #{$headerHeight} - #{$footerHeight} - 50px);
+      padding: 40px calc((100vw - #{$side-barWidth}) / 8);
+      // new postタブの場合は_post.scssへ
+      .mtag-list {
+        display: flex;
+        padding: 0 0 30px calc((100vw - #{$side-barWidth}) / 6);
+        font-size: 25px;
+        .rank {
+          padding-top: 10px;
+        }
+        .mtag {
+          height: 60px;
+          line-height: 60px;
+          background-color: $headerColor;
+          border: 1px solid $headerColor;
+          border-radius: 10px;
+          margin: 0 6px 10px;
+          &__name {
+            padding: 0 20px;
+            // font-size: 15px;
+          }
+        }
+      }
+    }
+    .list:not(.show) {
+      display: none;
+    }
+    .post-list1 {
+      overflow: scroll;
+      height: calc(100vh - #{$headerHeight} - #{$footerHeight} - 80px);
+      padding: 40px calc((100vw - #{$side-barWidth}) / 6);
+      // _post.scssへ
+    }
+    .post-list2 {
+      overflow: scroll;
+      height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+      padding: 40px calc((100vw - #{$side-barWidth}) / 6);
+      // _post.scssへ
+    }
+    .pc-frame {
+      height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+      padding: 40px calc((100vw - #{$side-barWidth}) / 6);
+      &__in {
+        padding: 10px 0;
+        border: 2px solid $decorationColor;
+        border-radius: 10px ;
+        background-color: $side-barColor;
+      }
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: $footerHeight;
+  background-color: $headerColor;
+  font-size: 7px;
+  color: $decorationColor;
+  text-align: center;
+  line-height: $footerHeight;
+}

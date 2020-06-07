@@ -1,0 +1,48 @@
+.main
+  %ul.main__header
+    %li.main__header__item.active
+      %i.fas.fa-envelope-open-text
+      NEW POSTS
+    %li.main__header__item
+      %i.fas.fa-crown
+      TAG RANKING
+  %ul.list.show
+    - @posts.each do |post|
+      %li.post
+        .upper-info
+          = link_to user_path(post.user) do
+            %p.upper-info__talker
+              = post.user.name
+              &nbsp;
+          %p.upper-info__date
+            = post.created_at.strftime("%Y/%m/%d %H:%M")
+        .middle-content
+          = image_tag post.image.url, class: 'middle-content__picture'
+          .middle-content__lower
+            %p.text
+              = post.content
+            .icon-box
+              = link_to post_path(post.id) do
+                .icon-box__comment
+                  %i.fas.fa-comment
+                  %p.comment-count
+                    - if post.comments.count > 0
+                      = post.comments.count
+              .icon-box__heart#likes_buttons_
+                = render partial: 'likes/like', locals: { post: post }
+        .lower-tag
+          %ul.tag-list
+            - post.tags.each do |tag|
+              %li.tag
+                .tag__name
+                  = link_to tag, root_path(tag_name: tag.name), class: "text-white"
+    = paginate(@posts)
+  %ul.list
+    - @tags.each.with_index(1) do |tag, i|
+      %li.mtag-list
+        .rank
+          = i
+          &period;
+        .mtag
+          .mtag__name
+            = link_to tag, root_path(tag_name: tag.name)

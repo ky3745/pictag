@@ -1,0 +1,93 @@
+.create-a-post {
+  h2 {
+    padding-left: 30px;
+  }
+  .form {
+    padding: 10px 0;
+    align-items: center;
+    #img_field {
+      font-size: 15px;
+      margin:10px auto 0;
+      border: solid 1px #EDBC6C;
+      color: #666;
+      position: relative;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 400px;
+      height: 250px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #fff;
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: 0.3s ease-out;
+    }
+    #img_field i {
+      font-size: 100px;
+      color: #aaa;
+      line-height: 250px;
+      transition: 0.3s ease-out;
+      padding-left: 150px;
+    }
+     
+    #img_field i.add {
+      display: none;
+      font-size: 50px;
+      position: absolute;
+      top: -90px;
+      right: 15px;
+    }
+     
+    #img_field:hover {
+      background-color: #EDBC6C;
+      transition: 0.3s ease-out;
+      opacity: 0.9;
+    }
+     
+    #img_field:hover i {
+      transition: 0.3s ease-out;
+      display: block;
+      color: #fff;
+    }
+    &__text {
+      display: block;
+      margin:15px auto 0;
+      outline: none;
+      border: 2px solid $decorationColor;
+      border-radius: 5px;
+      resize: none;
+      width: 400px;
+      -webkit-transition: width .3s;
+      transition: width .3s;
+    }
+    &__tags {
+      display: block;
+      margin:15px auto 0;
+      outline: none;
+      border: 2px solid $decorationColor;
+      border-radius: 5px;
+      resize: none;
+      width: 400px;
+      -webkit-transition: width .3s;
+      transition: width .3s;
+    }
+    .button-box {
+      width: 400px;
+      margin: 20px auto 0;
+      text-align: right;
+      &__btn {
+        padding: 10px 15px;
+        border-style: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: $headerColor;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+ 
+

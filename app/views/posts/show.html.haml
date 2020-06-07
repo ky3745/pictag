@@ -1,0 +1,68 @@
+.container
+  = render "side_bar"
+  .main
+    .post-list2
+      .post
+        .upper-info
+          = link_to "#" do
+            %p.upper-info__talker
+              = @post.user.name
+              &nbsp;
+          - if user_signed_in? && current_user.id == @post.user_id
+            %p.upper-info__date1
+              = @post.created_at.strftime("%Y/%m/%d %H:%M")
+            = link_to post_path(@post.id), method: :delete, class: "upper-info__delete" do
+              %i.fas.fa-trash-alt
+          - else
+            %p.upper-info__date
+              = @post.created_at.strftime("%Y/%m/%d %H:%M")
+        .middle-content
+          = image_tag @post.image.url, class: 'middle-content__picture'
+          .middle-content__lower
+            %p.text
+              = @post.content
+            .icon-box
+              .icon-box__heart
+                - if user_signed_in?
+                  - if current_user.already_liked?(@post)
+                    = link_to post_like_path(@post), method: :delete do
+                      .unlike
+                        %i.fas.fa-heart
+                  - else
+                    = link_to post_likes_path(@post), method: :post do
+                      %i.fas.fa-heart
+                - else
+                  %i.fas.fa-heart
+                %p.likes-count
+                  - if @likes_count > 0
+                    = @likes_count
+        .lower-tag
+          %ul.tag-list
+            - @post.tags.each do |tag|
+              %li.tag
+                .tag__name
+                  = link_to tag, root_path(tag_name: tag.name), class: "text-white"
+      .alert - COMMENTS -
+      - if @comments
+        - @comments.each do |comment|
+          .comment
+            .upper-info
+              = link_to "/users/#{comment.user_id}" do
+                %p.upper-info__talker
+                  = comment.user.name
+              %p.upper-info__date
+                = comment.created_at.strftime("%Y/%m/%d %H:%M")
+            .comment-content
+              .comment-content__lower
+                %p.text
+                  = comment.text
+      .comment-form
+        - if current_user
+          = form_for [@post, @comment] do |form|
+            = form.text_area :text, placeholder: "MAKE A COMMENT", rows: "3", class: "form__comment"
+            .button-box
+              = form.submit "SEND", class: "button-box__btn"
+        - else
+          %strong
+            .alert
+              %p ※※※ You need to login to comment!! ※※※

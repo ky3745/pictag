@@ -1,0 +1,22 @@
+.container
+  = render "side_bar"
+  .main
+    .pc-frame
+      .pc-frame__in
+        .create-a-post
+          %h2
+            CREATE A POST
+          = form_for @post, html: { class: "form"} do |form|
+            .field.image
+              = form.label 'サムネイル（スクリーンショットなど）' do
+                #img_field{:onclick => "$('#file').click()"}
+                  - if @post.image.url.present?
+                    = image_tag(@post.image.url)
+                  - else
+                    %i.fas.fa-image
+                    %i.fas.fa-file-upload.add
+              = form.file_field :image, class: "image", style: "display:none;", id: "file"
+            = form.text_area :content, placeholder: "TEXT", maxlength: "50", class: "form__text"
+            = form.text_field :tag_list, value: @post.tag_list.join(','), placeholder: "tags  (e.g.: dog,cat,please like)", class: "form__tags"
+            .button-box
+              = form.submit 'SUBMIT!', class: "button-box__btn"

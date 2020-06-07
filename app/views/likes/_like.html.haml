@@ -1,0 +1,13 @@
+- if user_signed_in?
+  - if current_user.already_liked?(post)
+    = link_to post_like_path(post.id, post.user_id), method: :delete do
+      .unlike
+        %i.fas.fa-heart
+  - else
+    = link_to post_likes_path(post.id), method: :post do
+      %i.fas.fa-heart
+- else
+  %i.fas.fa-heart
+%p.likes-count
+  - if post.likes.count > 0
+    = post.likes.count

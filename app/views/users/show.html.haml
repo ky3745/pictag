@@ -1,0 +1,42 @@
+.container
+  = render "posts/side_bar"
+  .main
+    .main__header1
+      = @user.name
+      's POSTS
+    %ul.post-list1
+      - @posts.each do |post|
+        %li.post
+          .upper-info
+            %p.upper-info__talker
+              = post.user.name
+              &nbsp;
+            - if user_signed_in? && current_user.id == post.user_id
+              %p.upper-info__date1
+                = post.created_at.strftime("%Y/%m/%d %H:%M")
+              = link_to post_path(post.id), method: :delete, class: "upper-info__delete", id: "delete-btn" do
+                %i.fas.fa-trash-alt
+            - else
+              %p.upper-info__date
+                = post.created_at.strftime("%Y/%m/%d %H:%M")
+          .middle-content
+            = image_tag post.image.url, class: 'middle-content__picture'
+            .middle-content__lower
+              %p.text
+                = post.content
+              .icon-box
+                = link_to post_path(post.id) do
+                  .icon-box__comment
+                    %i.fas.fa-comment
+                    %p.comment-count
+                      - if post.comments.count > 0
+                        = post.comments.count
+                .icon-box__heart
+                  = render partial: 'likes/like', locals: { post: post }
+          .lower-tag
+            %ul.tag-list
+              - post.tags.each do |tag|
+                %li.tag
+                  .tag__name
+                    = link_to tag, root_path(tag_name: tag.name), class: "text-white"
+      = paginate(@posts) 

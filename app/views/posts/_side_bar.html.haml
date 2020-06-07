@@ -1,0 +1,39 @@
+.side-bar
+  - if user_signed_in?
+    %p.user-name
+      %i.fas.fa-user
+      = current_user.name
+    %ul.user-menu
+      = link_to new_post_path do
+        %li.create-post
+          %i.fas.fa-edit
+          CREATE A POST
+      = link_to user_path(current_user) do
+        %li.my-post
+          %i.fas.fa-inbox
+          MY POSTS
+      = link_to "/users/#{current_user.id}/likes" do
+        %li.my-like
+          %i.fas.fa-heart
+          MY LIKES
+      = link_to edit_user_path(current_user) do
+        %li.edit-account
+          %i.fas.fa-user-edit
+          EDIT ACCOUNT
+      = link_to destroy_user_session_path,method: :delete do
+        %li.log-out
+          %i.fas.fa-sign-out-alt
+          LOG OUT
+  - else
+    %p.user-name
+      %i.fas.fa-user
+      GUEST
+    %ul.user-menu
+      = link_to new_user_session_path do
+        %li.log-in
+          %i.fas.fa-sign-in-alt
+          LOG IN
+      = link_to new_user_registration_path do
+        %li.create-account
+          %i.fas.fa-user-plus
+          CREATE ACCOUNT

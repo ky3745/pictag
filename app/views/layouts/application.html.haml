@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title PicTag
+    -# = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %link{:href => "https://fonts.googleapis.com/css?family=Baloo+Thambi+2|Kosugi+Maru|Oleo+Script&display=swap", :rel => "stylesheet"}/
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
+    -# = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  %body
+    .wrapper
+      = render "layouts/header"
+      = yield
+      = render "layouts/footer"

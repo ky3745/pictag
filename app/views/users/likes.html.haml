@@ -1,0 +1,48 @@
+-# - @likes.each do |like|
+-#   - post = Post.find_by(id: like.post_id)
+-#   - user = User.find_by(id: post.user_id)
+-#   = link_to( user.name, "/users/#{user.id}" )
+-#   = link_to(post.content, "/posts/#{post.id}")
+
+.container
+  = render "posts/side_bar"
+  .main
+    .main__header1
+      = @user.name
+      's LIKES
+    %ul.post-list1
+      - @likes.each do |like|
+        - post = Post.find_by(id: like.post_id)
+        %li.post
+          .upper-info
+            = link_to "#" do
+              %p.upper-info__talker
+                = post.user.name
+                &nbsp;
+              %p.upper-info__date
+                = post.created_at.strftime("%Y/%m/%d %H:%M")
+          .middle-content
+            = image_tag post.image.url, class: 'middle-content__picture'
+            .middle-content__lower
+              %p.text
+                = post.content
+              .icon-box
+                = link_to post_path(post.id) do
+                  .icon-box__comment
+                    %i.fas.fa-comment
+                    %p.comment-count
+                      - if post.comments.count > 0
+                        = post.comments.count
+                .icon-box__heart
+                  - if current_user.already_liked?(post)
+                    = link_to post_like_path(post.id, post.user_id), method: :delete do
+                      .unlike
+                        %i.fas.fa-heart
+                  %p.likes-count
+                    = post.likes.count
+          .lower-tag
+            %ul.tag-list
+              - post.tags.each do |tag|
+                %li.tag
+                  .tag__name
+                    = link_to tag, root_path(tag_name: tag.name), class: "text-white"
