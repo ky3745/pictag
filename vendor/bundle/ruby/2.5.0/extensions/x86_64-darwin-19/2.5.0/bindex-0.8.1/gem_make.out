@@ -1,0 +1,15 @@
+current directory: /Users/yamakai/projects/pictag1/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/yamakai/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200319-70701-dy201b.rb extconf.rb
+creating Makefile
+
+current directory: /Users/yamakai/projects/pictag1/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/yamakai/projects/pictag1/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/yamakai/projects/pictag1/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20200319-70701-1mvgkrd/skiptrace/internal

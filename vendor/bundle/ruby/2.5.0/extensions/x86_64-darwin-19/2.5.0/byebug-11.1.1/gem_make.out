@@ -1,0 +1,19 @@
+current directory: /Users/yamakai/projects/pictag1/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+/Users/yamakai/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200319-70701-yasooc.rb extconf.rb
+creating Makefile
+
+current directory: /Users/yamakai/projects/pictag1/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/yamakai/projects/pictag1/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/yamakai/projects/pictag1/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20200319-70701-1agz758/byebug
