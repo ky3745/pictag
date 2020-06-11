@@ -61,3 +61,7 @@ gem 'acts-as-taggable-on'
 # gem 'jquery-ui-rails'
 # gem 'counter_culture'
 gem 'pry-rails'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
