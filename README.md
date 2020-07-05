@@ -34,19 +34,20 @@ Things you may want to cover:
 - has_many :posts
 - belongs_to :tag
 - has_many :comments
+- has_many :likes
 
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text||
 |image|string|null: false|
-|good|integer||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - has_many :post_tags
 - has_many :tags,   through:  :post_tags
 - has_many :comments
+- has_many :likes
 
 ## tagsテーブル
 |Column|Type|Options|
@@ -70,6 +71,15 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|post_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :post
+- belongs_to :user
+
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |post_id|integer|null: false, foreign_key: true|
 ### Association
