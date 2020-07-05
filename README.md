@@ -1,30 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリ名
+### PicTag
 
-Things you may want to cover:
+## 概要
+Instagramのような写真投稿アプリです。
+アカウントを作成し、投稿、投稿閲覧、いいね&コメントをする事ができる。
+投稿には任意の数タグをつけることができ、特定のタグのついた投稿のみを閲覧したり、人気のタグを確認したりすることができる。
 
-* Ruby version
+## 制作背景
+自分がよく使用するようなSNSを模倣し、そのようなアプリケーションがどのようにして作られているか、どんな工夫が施されているかなど、制作の内側に立って考え、自己のスキルアップにつなげたいと思った。またタグをつけることに重きを置いたアプリケーションはまだあまり無いなと感じたため、このようなコンセプトを考えるに至った。
 
-* System dependencies
+## DEMO
 
-* Configuration
+## 実装予定
+いいね機能の非同期化
+フォロー機能、DM機能など
+本番環境へのデプロイ
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-# PicTag DB設計
-## usersテーブル
+## DB設計
+### usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
@@ -36,7 +31,7 @@ Things you may want to cover:
 - has_many :comments
 - has_many :likes
 
-## postsテーブル
+### postsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text||
@@ -49,7 +44,7 @@ Things you may want to cover:
 - has_many :comments
 - has_many :likes
 
-## tagsテーブル
+### tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -58,7 +53,7 @@ Things you may want to cover:
 - has_many :post_tags
 - has_many  :posts,  through:  :post_tags
 
-## post_tagsテーブル
+### post_tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |post_id|integer|null: false, foreign_key: true|
@@ -67,7 +62,7 @@ Things you may want to cover:
 - belongs_to :post
 - belongs_to :tag
 
-## commentsテーブル
+### commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
@@ -77,7 +72,7 @@ Things you may want to cover:
 - belongs_to :post
 - belongs_to :user
 
-## likesテーブル
+### likesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
