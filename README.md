@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/61592505/86578229-6f457f00-bfb6-11ea-9
 
 ### トップページ(投稿一覧/タグ使用数ランキング)
 トップページには投稿一覧が表示されている。
-https://user-images.githubusercontent.com/61592505/86578479-d400d980-bfb6-11ea-86b1-cd666c984250.gif
+![投稿一覧](https://user-images.githubusercontent.com/61592505/86578479-d400d980-bfb6-11ea-86b1-cd666c984250.gif)
 上部のタブ切り替えでタグの使用数ランキングを表示することができる。
 https://user-images.githubusercontent.com/61592505/86584203-83da4500-bfbf-11ea-8135-26d39b5eccfa.gif
 
