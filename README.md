@@ -12,6 +12,41 @@ Instagramのような写真投稿アプリです。
 自分がよく使用するようなSNSを模倣し、そのようなアプリケーションがどのようにして作られているか、どんな工夫が施されているかなど、制作の内側に立って考え、自己のスキルアップにつなげたいと思った。またタグをつけることに重きを置いたアプリケーションはまだあまり無いなと感じたため、このようなコンセプトを考えるに至った。
 
 ## DEMO
+### ログイン/新規登録画面
+https://user-images.githubusercontent.com/61592505/86577909-ee868300-bfb5-11ea-832c-15220d641794.png
+https://user-images.githubusercontent.com/61592505/86578229-6f457f00-bfb6-11ea-9732-2dfbe130f09f.png
+
+### トップページ(投稿一覧/タグ使用数ランキング)
+トップページには投稿一覧が表示されている。
+https://user-images.githubusercontent.com/61592505/86578479-d400d980-bfb6-11ea-86b1-cd666c984250.gif
+上部のタブ切り替えでタグの使用数ランキングを表示することができる。
+https://user-images.githubusercontent.com/61592505/86584203-83da4500-bfbf-11ea-8135-26d39b5eccfa.gif
+
+### サイドバー
+サイドバーには各ページへのリンクが表示されている。
+- CREATE A POST(新規投稿)
+- MY POSTS(自分の投稿一覧)
+- MY LIKES(自分のいいねした投稿一覧)
+- EDIT ACCOUNT(アカウント情報編集)
+- LOG OUT(ログアウト) 
+https://user-images.githubusercontent.com/61592505/86588435-a2900a00-bfc6-11ea-9737-f6b7e6a2e490.png
+サイドバー未ログイン時には表示が変わる。
+https://user-images.githubusercontent.com/61592505/86587745-2b0dab00-bfc5-11ea-9e68-750a2309bf6a.png
+
+### 新規投稿(写真選択/タグ付)
+写真を選択すると、プレビューが表示される
+https://user-images.githubusercontent.com/61592505/86586917-b0905b80-bfc3-11ea-8f14-e183b729647c.gif
+タグ入力時にカンマ区切りすることで、タグを複数個紐づけることができる。
+https://user-images.githubusercontent.com/61592505/86587529-be92ac00-bfc4-11ea-8e13-a01872fc2220.png
+https://user-images.githubusercontent.com/61592505/86587667-044f7480-bfc5-11ea-8b87-0da8fbbd6f51.png
+
+### いいね機能
+ハートマークのボタンを押すと任意の投稿に「いいね」をすることができる。もう一度押す事で取り消しも可能。
+https://user-images.githubusercontent.com/61592505/86588023-d0c11a00-bfc5-11ea-8493-f0058ab2cebb.gif
+
+### コメント機能
+吹き出しマークのボタンを押すと投稿詳細ページに飛び、コメントを閲覧・投稿することができる。
+https://user-images.githubusercontent.com/61592505/86588924-99ec0380-bfc7-11ea-8a8d-83a0d29a5f73.gif
 
 ## 実装予定
 - いいね機能の非同期化
