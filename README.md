@@ -29,10 +29,11 @@ Instagramのような写真投稿アプリです。<br>
 - MY LIKES(自分のいいねした投稿一覧)
 - EDIT ACCOUNT(アカウント情報編集)
 - LOG OUT(ログアウト) 
-<a href="サイドバー"><img src="https://user-images.githubusercontent.com/61592505/86588435-a2900a00-bfc6-11ea-9737-f6b7e6a2e490.png" width="100px;" /></a>
+サイドバー
+<a href="サイドバー"><img src="https://user-images.githubusercontent.com/61592505/86588435-a2900a00-bfc6-11ea-9737-f6b7e6a2e490.png" width="300px;" /></a>
   <br>
 未ログイン時には表示が変わる。
-![未ログイン](https://user-images.githubusercontent.com/61592505/86587745-2b0dab00-bfc5-11ea-9e68-750a2309bf6a.png)
+<a href="未ログイン"><img src="https://user-images.githubusercontent.com/61592505/86587745-2b0dab00-bfc5-11ea-9e68-750a2309bf6a.png" width="300px;" /></a>
 
 ### 新規投稿(写真選択/タグ付)
 写真を選択すると、プレビューが表示される
