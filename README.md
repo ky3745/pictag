@@ -13,7 +13,7 @@ Instagramのような写真投稿アプリです。
 
 ## DEMO
 ### ログイン/新規登録画面
-(https://user-images.githubusercontent.com/61592505/86577909-ee868300-bfb5-11ea-832c-15220d641794.png)
+![ログイン](https://user-images.githubusercontent.com/61592505/86577909-ee868300-bfb5-11ea-832c-15220d641794.png)
 (https://user-images.githubusercontent.com/61592505/86578229-6f457f00-bfb6-11ea-9732-2dfbe130f09f.png)
 
 ### トップページ(投稿一覧/タグ使用数ランキング)
