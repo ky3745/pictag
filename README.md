@@ -4,7 +4,7 @@
 ### PicTag
 
 ## 概要
-Instagramのような写真投稿アプリです。
+Instagramのような写真投稿アプリです。<br>
 アカウントを作成し、投稿、投稿閲覧、いいね&コメントをする事ができる。
 投稿には任意の数タグをつけることができ、特定のタグのついた投稿のみを閲覧したり、人気のタグを確認したりすることができる。
 
@@ -14,7 +14,7 @@ Instagramのような写真投稿アプリです。
 ## DEMO
 ### ログイン/新規登録画面
 ![ログイン](https://user-images.githubusercontent.com/61592505/86577909-ee868300-bfb5-11ea-832c-15220d641794.png)
-(https://user-images.githubusercontent.com/61592505/86578229-6f457f00-bfb6-11ea-9732-2dfbe130f09f.png)
+![新規登録](https://user-images.githubusercontent.com/61592505/86578229-6f457f00-bfb6-11ea-9732-2dfbe130f09f.png)
 
 ### トップページ(投稿一覧/タグ使用数ランキング)
 トップページには投稿一覧が表示されている。
@@ -29,24 +29,24 @@ Instagramのような写真投稿アプリです。
 - MY LIKES(自分のいいねした投稿一覧)
 - EDIT ACCOUNT(アカウント情報編集)
 - LOG OUT(ログアウト) 
-https://user-images.githubusercontent.com/61592505/86588435-a2900a00-bfc6-11ea-9737-f6b7e6a2e490.png
+![サイドバー](https://user-images.githubusercontent.com/61592505/86588435-a2900a00-bfc6-11ea-9737-f6b7e6a2e490.png)
 サイドバー未ログイン時には表示が変わる。
-https://user-images.githubusercontent.com/61592505/86587745-2b0dab00-bfc5-11ea-9e68-750a2309bf6a.png
+![未ログイン](https://user-images.githubusercontent.com/61592505/86587745-2b0dab00-bfc5-11ea-9e68-750a2309bf6a.png)
 
 ### 新規投稿(写真選択/タグ付)
 写真を選択すると、プレビューが表示される
-https://user-images.githubusercontent.com/61592505/86586917-b0905b80-bfc3-11ea-8f14-e183b729647c.gif
+![プレビュー](https://user-images.githubusercontent.com/61592505/86586917-b0905b80-bfc3-11ea-8f14-e183b729647c.gif)
 タグ入力時にカンマ区切りすることで、タグを複数個紐づけることができる。
-https://user-images.githubusercontent.com/61592505/86587529-be92ac00-bfc4-11ea-8e13-a01872fc2220.png
-https://user-images.githubusercontent.com/61592505/86587667-044f7480-bfc5-11ea-8b87-0da8fbbd6f51.png
+![タグ入力](https://user-images.githubusercontent.com/61592505/86587529-be92ac00-bfc4-11ea-8e13-a01872fc2220.png)
+![タグ表示](https://user-images.githubusercontent.com/61592505/86587667-044f7480-bfc5-11ea-8b87-0da8fbbd6f51.png)
 
 ### いいね機能
 ハートマークのボタンを押すと任意の投稿に「いいね」をすることができる。もう一度押す事で取り消しも可能。
-https://user-images.githubusercontent.com/61592505/86588023-d0c11a00-bfc5-11ea-8493-f0058ab2cebb.gif
+![いいね](https://user-images.githubusercontent.com/61592505/86588023-d0c11a00-bfc5-11ea-8493-f0058ab2cebb.gif)
 
 ### コメント機能
 吹き出しマークのボタンを押すと投稿詳細ページに飛び、コメントを閲覧・投稿することができる。
-https://user-images.githubusercontent.com/61592505/86588924-99ec0380-bfc7-11ea-8a8d-83a0d29a5f73.gif
+![コメント](https://user-images.githubusercontent.com/61592505/86588924-99ec0380-bfc7-11ea-8a8d-83a0d29a5f73.gif)
 
 ## 実装予定
 - いいね機能の非同期化
